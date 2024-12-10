@@ -2,12 +2,17 @@
     "env": {
         "browser": true,
         "es6": true,
-        "jest": true
+        "jest": true 
     },
-
-    "extends": "airbnb-base",
+    "extends": [
+        "eslint:recommended",
+        "plugin:jest/recommended" 
+    ],
     "parserOptions": {
         "ecmaVersion": 2018,
-        "sourseType": "module"
+        "sourceType": "module"
+    },
+    "rules": {
+         "no-unused-disable": "off"
     }
 }

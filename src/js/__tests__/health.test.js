@@ -1,6 +1,6 @@
-import getHealthStatus from './health';
+/* global test, expect */
+import getHealthStatus from '../health';
 
-describe('Health Indicator', () => {
     test('should return "healthy" for health > 50', () => {
         expect(getHealthStatus({ name: 'Маг', health: 90 })).toBe('healthy');
     });
@@ -14,4 +14,3 @@ describe('Health Indicator', () => {
         expect(getHealthStatus({ name: 'Маг', health: 15 })).toBe('critical');
         expect(getHealthStatus({ name: 'Маг', health: 10 })).toBe('critical');
     });
-});
